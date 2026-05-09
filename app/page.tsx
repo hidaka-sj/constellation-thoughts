@@ -2,6 +2,7 @@ import { LinksSection } from "./_components/LinksSection";
 import { ProjectsSection } from "./_components/ProjectsSection";
 import { externalLinks } from "./_content/links";
 import { projects } from "./_content/projects";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -57,6 +58,23 @@ export default function Home() {
         </section>
 
         <div className="grid gap-6 sm:grid-cols-2">
+          <section className="sm:col-span-2 rounded-2xl border border-white/10 bg-white/[0.03] p-6">
+            <div className="flex items-center justify-between gap-4">
+              <div>
+                <h2 className="text-xl font-semibold tracking-tight">Blog</h2>
+                <p className="mt-2 text-sm leading-6 text-white/65">
+                  制作メモや学習ログをまとめるブログを追加しました。
+                </p>
+              </div>
+              <Link
+                href="/blog"
+                className="rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm text-white/90 transition hover:bg-white/10"
+              >
+                Open Blog →
+              </Link>
+            </div>
+          </section>
+
           <div className="sm:col-span-2">
             <h2 className="mb-3 text-sm font-semibold tracking-widest text-white/60">
               PROJECTS
